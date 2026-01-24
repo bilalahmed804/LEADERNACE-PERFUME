@@ -1,0 +1,137 @@
+/* ===============================
+   STORY SECTION
+================================ */
+.story-section {
+  background-color: #16161B;
+  padding: clamp(40px, 6vw, 120px);
+  color: #ffffff;
+}
+
+.story-container {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: clamp(32px, 6vw, 120px);
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ===============================
+   MAIN TEXT (LEFT)
+================================ */
+.story-text-main {
+  max-width: 620px;
+}
+
+.story-heading {
+  font-family: "Portada ARA", serif;
+  font-size: clamp(28px, 4vw, 56px);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+
+.story-description {
+  font-size: clamp(14px, 1.2vw, 18px);
+  line-height: 1.9;
+  opacity: 0.85;
+}
+
+/* ===============================
+   RIGHT SIDE
+================================ */
+.story-side {
+  display: flex;
+  align-items: center;
+  gap: clamp(24px, 4vw, 64px);
+}
+
+/* Bottles */
+.story-bottles {
+  position: relative;
+  width: 220px;
+  height: 320px;
+}
+
+.story-bottles img {
+  position: absolute;
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Bottle positions */
+.story-bottles img:nth-child(1) {
+  top: 0;
+  right: 0;
+}
+.story-bottles img:nth-child(2) {
+  top: 40px;
+  left: 0;
+}
+.story-bottles img:nth-child(3) {
+  bottom: 40px;
+  right: 0;
+}
+.story-bottles img:nth-child(4) {
+  bottom: 0;
+  left: 0;
+}
+
+/* ===============================
+   STORY TEXT (RIGHT)
+================================ */
+.story-text-side {
+  max-width: 320px;
+}
+
+.story-text-side h3 {
+  font-family: "Portada ARA", serif;
+  font-size: clamp(22px, 2.5vw, 32px);
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.story-text-side p {
+  font-size: clamp(13px, 1vw, 15px);
+  line-height: 1.9;
+  opacity: 0.85;
+}
+
+
+@media (max-width: 992px) {
+  .story-container {
+    grid-template-columns: 1fr;
+  }
+
+  .story-side {
+    justify-content: space-between;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .story-section {
+    padding: 32px 20px;
+  }
+
+  .story-container {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .story-side {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .story-bottles {
+    width: 200px;
+    height: 260px;
+  }
+
+  .story-text-side {
+    max-width: 100%;
+  }
+}

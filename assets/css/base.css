@@ -1,0 +1,319 @@
+
+
+@font-face {
+  font-family: "Portada ARA";
+  src: url("../fonts/PortadaARARegular.ttf") format("woff2"),
+       url("../fonts/PortadaARARegular.ttf") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Portada ARA";
+  src: url("../fonts/PortadaARABold.otf") format("woff2"),
+       url("../fonts/PortadaARABold.otf") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background-color: #16161B;
+  color: #fff;
+  overflow: hidden;
+}
+
+.rtl-app {
+  direction: rtl;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0 40px;
+  position: relative;
+  z-index: 10;
+  background: transparent;
+}
+
+.hero-section {
+  position: relative;
+  height: calc(100vh - clamp(64px, 8vh, 96px));
+  background-image: url("../images/bgimage.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0,0,0,0.35),
+    rgba(0,0,0,0.65)
+  );
+}
+
+
+.hero-content {
+  position: relative;
+  max-width: 900px;
+  padding: clamp(24px, 4vw, 64px);
+  z-index: 1;
+}
+
+
+.hero-title {
+  font-family: "Portada ARA", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 80px;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  text-align: center;
+}
+
+
+.hero-subtitle {
+  font-family: "Portada ARA", serif;
+  font-size: clamp(22px, 3vw, 40px);
+  font-weight: 400;
+  margin: 12px 0 24px;
+}
+
+.hero-text {
+  font-family: "Portada ARA", serif;
+  font-size: clamp(14px, 1.3vw, 18px);
+  line-height: 1.8;
+  opacity: 0.85;
+  margin-bottom: 32px;
+}
+
+
+.hero-btn {
+  font-family: "Portada ARA", serif;
+  padding: 8px 46px 8px 46px;
+  font-size: 14px;
+  color: #fff;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.4);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.nav-icons {
+  order: 3;
+}
+
+.nav-logo {
+  order: 2;
+}
+
+.nav-links {
+  order: 1;
+}
+
+
+/* ICONS (RIGHT) */
+.nav-icons {
+  display: flex;
+  gap:126px !important;
+}
+
+.nav-icons button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.nav-icons img,
+.icon-arrow {
+  width: 22px;
+  height: 22px;
+}
+
+/* LOGO (CENTER) */
+.nav-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+.nav-logo img {
+  height: 256px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  background: transparent;
+  gap: 64px;
+
+}
+
+
+.nav-link {
+  font-size: clamp(14px, 1.1vw, 18px);
+  font-weight: 500;
+    background: transparent !important;
+    color: #fff;
+    border :none
+
+}
+
+.nav-link.is-active {
+  opacity: 1;
+}
+
+
+/* ========================= */
+/* RESPONSIVE BREAKPOINTS */
+/* ========================= */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .nav-logo img {
+    height: 36px;
+  }
+
+  .nav-link {
+    font-size: 14px;
+  }
+
+  .nav-icons img,
+  .icon-arrow {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .navbar {
+    height: 64px;
+  }
+
+  .nav-links {
+    display: none; /* mobile menu later */
+  }
+
+  .nav-logo img {
+    height: 32px;
+  }
+ .nav-icons img,
+  .icon-arrow {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+
+/* LOGO */
+.nav-logo {
+  text-align: center;
+  font-weight: 600;
+}
+
+.nav-logo small {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 4px;
+}
+
+/* ICONS */
+.nav-icons {
+  display: flex;
+  gap: 16px;
+}
+
+.nav-icons button {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* APP */
+.app-container {
+  position: relative;
+  height: calc(100vh - 80px);
+}
+
+.app-view {
+  position: absolute;
+  inset: 0;
+  padding: 40px;
+  opacity: 0;
+  pointer-events: none;
+  background-color: #16161B;
+}
+/* ===============================
+   VIEW TRANSITIONS
+================================ */
+.app-view {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+}
+
+.app-view.is-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===============================
+   BACKGROUND IMAGE ANIMATION
+================================ */
+.app-view.has-bg-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.app-view.has-bg-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: inherit;
+  background-size: inherit;
+  background-position: inherit;
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+  z-index: -1;
+}
+
+.app-view.is-active.has-bg-image::before {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.app-view.has-bg-image {
+  background-image: url("../images/bgimage.png");
+  background-size: cover;
+  background-position: center;
+}
