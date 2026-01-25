@@ -2,19 +2,20 @@
 
 @font-face {
   font-family: "Portada ARA";
-  src: url("../fonts/PortadaARARegular.ttf") format("woff2"),
-       url("../fonts/PortadaARARegular.ttf") format("woff");
+  src: url("../fonts/PortadaARARegular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Portada ARA";
-  src: url("../fonts/PortadaARABold.otf") format("woff2"),
-       url("../fonts/PortadaARABold.otf") format("woff");
+  src: url("../fonts/PortadaARABold.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
 }
+
 body {
   margin: 0;
   font-family: system-ui, sans-serif;
@@ -26,6 +27,12 @@ body {
 .rtl-app {
   direction: rtl;
 }
+.app-container {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 
 .navbar {
   display: flex;
@@ -36,11 +43,37 @@ body {
   position: relative;
   z-index: 10;
   background: transparent;
+  flex-shrink: 0;
+}
+
+.main-content {
+  flex: 1;
+  position: relative;
+  overflow-y: auto;
+}
+
+.app-view {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  padding: clamp(20px, 4vw, 40px);
+  background-color: #16161B;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+  scrollbar-width: thin;
+  scrollbar-color: #3a3a42 #16161B;
 }
 
 .hero-section {
   position: relative;
-  height: calc(100vh - clamp(64px, 8vh, 96px));
+  height: 100%;
   background-image: url("../images/bgimage.png");
   background-size: cover;
   background-position: center;
@@ -74,12 +107,11 @@ body {
 .hero-title {
   font-family: "Portada ARA", serif;
   font-weight: 700;
-  font-style: normal;
-  font-size: 80px;
+  font-size: clamp(36px, 6vw, 80px);
   line-height: 1;
   letter-spacing: 0.01em;
-  text-align: center;
 }
+
 
 
 .hero-subtitle {
@@ -172,7 +204,8 @@ body {
   font-weight: 500;
     background: transparent !important;
     color: #fff;
-    border :none
+    border :none ;
+    cursor: pointer;
 
 }
 
@@ -256,16 +289,76 @@ body {
 .app-container {
   position: relative;
   height: calc(100vh - 80px);
+  
 }
 
 .app-view {
   position: absolute;
   inset: 0;
-  padding: 40px;
+  height: 100%;
+
+  padding: clamp(20px, 4vw, 40px);
+
+  background-color: #16161B;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+
   opacity: 0;
   pointer-events: none;
-  background-color: #16161B;
+  transform: translateY(20px);
+
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+
+  scrollbar-width: thin;
+  scrollbar-color: #3a3a42 #16161B;
 }
+
+.app-view.is-active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.app-view.has-bg-image::before {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.app-view.is-active.has-bg-image::before {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.app-view {
+  scrollbar-width: thin;
+  scrollbar-color: #3a3a42 #16161B;
+}
+
+.app-view::-webkit-scrollbar {
+  width: 8px;
+}
+
+.app-view::-webkit-scrollbar-track {
+  background: #16161B;
+}
+
+.app-view::-webkit-scrollbar-thumb {
+  background-color: #3a3a42;
+  border-radius: 6px;
+  border: 2px solid #16161B;
+}
+
+.app-view::-webkit-scrollbar-thumb:hover {
+  background-color: #5a5a66;
+}
+
+
+
 /* ===============================
    VIEW TRANSITIONS
 ================================ */

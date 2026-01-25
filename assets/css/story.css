@@ -1,137 +1,217 @@
-/* ===============================
-   STORY SECTION
-================================ */
+@font-face {
+  font-family: "Portada ARA";
+  src: url("../fonts/PortadaARARegular.ttf") format("woff2"),
+       url("../fonts/PortadaARARegular.ttf") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
 .story-section {
+  direction: rtl;
   background-color: #16161B;
-  padding: clamp(40px, 6vw, 120px);
+  padding: clamp(60px, 8vw, 140px) clamp(20px, 4vw, 80px);
   color: #ffffff;
+  text-align: right;
 }
 
 .story-container {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: clamp(32px, 6vw, 120px);
-  align-items: center;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-/* ===============================
-   MAIN TEXT (LEFT)
-================================ */
-.story-text-main {
-  max-width: 620px;
+.story-upper {
+  text-align: center;
+  margin-bottom: clamp(60px, 8vw, 100px);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.heading-with-decoration {
+  position: relative;
+  margin-bottom: 30px;
 }
 
 .story-heading {
   font-family: "Portada ARA", serif;
-  font-size: clamp(28px, 4vw, 56px);
   font-weight: 700;
-  line-height: 1.1;
-  margin-bottom: 24px;
+  font-style: normal;
+  font-size: 40px;
+  line-height: 1;
+  letter-spacing: 0;
+  margin-bottom: 15px;
+}
+
+/* Colored words styling */
+.decorated-text {
+  color: #515986;
+  position: relative;
+  display: inline-block;
+}
+
+.colored-text {
+  color: #515986;
 }
 
 .story-description {
-  font-size: clamp(14px, 1.2vw, 18px);
-  line-height: 1.9;
-  opacity: 0.85;
+  font-family: "Portada ARA", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 1.8;
+  letter-spacing: 0;
+  margin-top: 30px;
 }
 
 /* ===============================
-   RIGHT SIDE
+   LOWER SECTION - TWO COLUMNS
 ================================ */
-.story-side {
+.story-lower {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 6vw, 80px);
+  align-items: start;
+}
+
+.story-image-column {
+  width: 100%;
+   height: 700px;
+}
+
+.story-image-single {
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.story-image-single img {
+  width: 60%;
+  height: 60%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.story-image-single:hover img {
+  transform: scale(1.03);
+}
+
+/* RIGHT COLUMN: Content */
+.story-content-column {
   display: flex;
-  align-items: center;
-  gap: clamp(24px, 4vw, 64px);
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 40px;
 }
 
-/* Bottles */
-.story-bottles {
-  position: relative;
-  width: 220px;
-  height: 320px;
-}
-
-.story-bottles img {
-  position: absolute;
-  width: 100px;
-  height: auto;
-  object-fit: contain;
-}
-
-/* Bottle positions */
-.story-bottles img:nth-child(1) {
-  top: 0;
-  right: 0;
-}
-.story-bottles img:nth-child(2) {
-  top: 40px;
-  left: 0;
-}
-.story-bottles img:nth-child(3) {
-  bottom: 40px;
-  right: 0;
-}
-.story-bottles img:nth-child(4) {
-  bottom: 0;
-  left: 0;
-}
-
-/* ===============================
-   STORY TEXT (RIGHT)
-================================ */
 .story-text-side {
-  max-width: 320px;
+  max-width: 400px;
 }
 
 .story-text-side h3 {
   font-family: "Portada ARA", serif;
-  font-size: clamp(22px, 2.5vw, 32px);
+  font-size: clamp(24px, 3vw, 36px);
   font-weight: 700;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
+  color: #515986;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.story-text-side h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 60px;
+  height: 3px;
+  background-color: #515986;
+  opacity: 0.7;
 }
 
 .story-text-side p {
-  font-size: clamp(13px, 1vw, 15px);
+  font-family: "Portada ARA", serif;
+  font-weight: 400;
+  font-size: clamp(15px, 1.2vw, 18px);
   line-height: 1.9;
   opacity: 0.85;
 }
 
-
+/* ===============================
+   RESPONSIVE DESIGN
+================================ */
 @media (max-width: 992px) {
-  .story-container {
+  .story-lower {
     grid-template-columns: 1fr;
+    gap: 60px;
   }
-
-  .story-side {
-    justify-content: space-between;
+  
+  .story-image-single {
+    height: 400px;
+  }
+  
+  .story-content-column {
+    padding-top: 0;
+    justify-content: flex-start;
+  }
+  
+  .story-text-side {
+    max-width: 100%;
+    text-align: right;
+  }
+  
+  .story-text-side h3::after {
+    right: 50%;
+    transform: translateX(50%);
+    left: auto;
   }
 }
 
-
 @media (max-width: 768px) {
   .story-section {
-    padding: 32px 20px;
+    padding: 40px 20px;
   }
-
-  .story-container {
-    grid-template-columns: 1fr;
-    gap: 48px;
+  
+  .story-upper {
+    margin-bottom: 50px;
   }
-
-  .story-side {
-    flex-direction: column;
-    align-items: center;
+  
+  .story-image-single {
+    height: 350px;
+    border-radius: 12px;
+  }
+  
+  .story-heading {
+    font-size: clamp(28px, 6vw, 40px);
+  }
+  
+  .story-description {
+    font-size: 18px;
+  }
+  
+  .story-content-column {
+    justify-content: center;
+  }
+  
+  .story-text-side {
     text-align: center;
   }
-
-  .story-bottles {
-    width: 200px;
-    height: 260px;
+  
+  .story-text-side h3::after {
+    right: 50%;
+    transform: translateX(50%);
   }
+}
 
-  .story-text-side {
-    max-width: 100%;
+@media (max-width: 480px) {
+  .story-image-single {
+    height: 280px;
+  }
+  
+  .story-text-side h3 {
+    font-size: 24px;
+  }
+  
+  .story-text-side p {
+    font-size: 16px;
   }
 }
