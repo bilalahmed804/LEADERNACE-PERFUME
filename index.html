@@ -1,152 +1,201 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LEADERNACE PERFUME</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LEADERNACE PERFUME</title>
 
-  <link rel="stylesheet" href="assets/css/base.css" />
-  <link rel="stylesheet" href="assets/css/animations.css" />
-  <link rel="stylesheet" href="assets/css/story.css">
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/animations.css" />
+    <link rel="stylesheet" href="assets/css/story.css" />
+  </head>
 
-</head>
+  <body class="rtl-app theme-dark">
+    <main class="app-container">
+      <header class="navbar">
+        <div class="nav-icons">
+          <button data-route="vector" aria-label="Vector">
+            <img src="assets/images/Vector.png" alt="Vector Icon" />
+          </button>
 
-<body class="rtl-app theme-dark">
+          <button data-route="profile" aria-label="Profile">
+            <img src="assets/images/profile.png" alt="Profile Icon" />
+          </button>
 
-  <main class="app-container">
-<header class="navbar">
+          <button data-route="group" aria-label="Group">
+            <img src="assets/images/Group.png" alt="Group Icon" />
+          </button>
 
-  <div class="nav-icons">
-    <button data-route="vector" aria-label="Vector">
-      <img src="assets/images/Vector.png" alt="Vector Icon" />
-    </button>
+          <button aria-label="More" class="icon-btn">
+            <svg
+              class="icon-arrow"
+              width="12"
+              height="12"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6 9L12 15L18 9"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
 
-    <button data-route="profile" aria-label="Profile">
-      <img src="assets/images/profile.png" alt="Profile Icon" />
-    </button>
+        <!-- CENTER: LOGO IMAGE -->
+        <div class="nav-logo">
+          <img src="assets/images/logo.png" alt="Leadernace Perfume Logo" />
+        </div>
 
-    <button data-route="group" aria-label="Group">
-      <img src="assets/images/Group.png" alt="Group Icon" />
-    </button>
+        <!-- LEFT: NAV LINKS -->
+        <nav class="nav-links">
+          <button data-route="home" class="nav-link is-active">
+            الصفحة الرئيسية
+          </button>
 
-  <button aria-label="More" class="icon-btn">
-  <svg
-    class="icon-arrow"
-    width="12"
-    height="12"
-    viewBox="0 0 24 24"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      d="M6 9L12 15L18 9"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    />
-  </svg>
-</button>
+          <button data-route="story" class="nav-link">قصتنا</button>
+          <button data-route="products" class="nav-link">المنتجات</button>
+          <a href="/pages/contact/index.html"
+            ><button class="nav-link">تواصل معنا</button></a
+          >
+        </nav>
+      </header>
 
-  </div>
+      <section id="home" class="hero-section app-view is-active has-bg-image">
+        <div class="hero-section">
+          <h1 class="hero-title">عطور وُلدت للقيادة</h1>
+          <h2 class="hero-subtitle">فقط</h2>
 
-  <!-- CENTER: LOGO IMAGE -->
-  <div class="nav-logo">
-    <img src="assets/images/logo.png" alt="Leadernace Perfume Logo" />
-  </div>
-
-  <!-- LEFT: NAV LINKS -->
-  <nav class="nav-links">
-    <button data-route="home" class="nav-link is-active">الصفحة الرئيسية</button>
-    
-    <button data-route="story" class="nav-link">قصتنا</button>
-    <button data-route="products" class="nav-link">المنتجات</button>
-    <button data-route="contact" class="nav-link">تواصل معنا</button>
-  </nav>
-
-</header>
-
-<section id="home" class="hero-section app-view is-active has-bg-image">
-  <div class="hero-content">
-    <h1 class="hero-title">عطور وُلدت للقيادة</h1>
-    <h2 class="hero-subtitle">فقط</h2>
-
-    <p class="hero-text">
-    في ظل الحياة المتسارعة وأنشغال الكثير في أعمالهم اليومية، نشأت عطور leadernace، عندما يكون المصمم منغمس في بيئات العمل يصدر حل المشكلة برائحة العطر التي تصدر عبير من الروائح الممزوجة في القوة والهدوء بخيارين لكِ ولهُ
-    </p>
-
-    <button class="hero-btn">اطلب الآن</button>
-  </div>
-</section>
-
-    
-<section id="story" class="app-view story-section">
-  <div class="story-container">
-
-    <!-- UPPER SECTION: Heading & Description -->
-    <div class="story-upper">
-      <div class="heading-with-decoration">
-        <h2 class="story-heading">
-          عندما يكون 
-          <span class="decorated-text">
-            <span class="text-underline">المصمم</span>
-          </span> 
-          منغمس في بيئات 
-          <span class="colored-text">العمل</span>
-        </h2>
-        <div class="heading-decoration"></div>
-      </div>
-
-      <p class="story-description">
-        في ظل الحياة المتسارعة وأنشغال الكثير في أعمالهم اليومية، نشأت عطور leadernace،
-        عندما يكون المصمم منغمس في بيئات العمل يصدر حل المشكلة برائحة العطر التي تصدر
-        عبير من الروائح الممزوجة في القوة والهدوء بخيارين لكِ ولهُ،
-        ولحل المشكلة كذلك أقرأ القصة ادناه
-      </p>
-    </div>
-
-    <!-- LOWER SECTION: Two Columns -->
-    <div class="story-lower">
-      <div class="story-content-column">
-        <div class="story-text-side">
-          <h3>قصتنا</h3>
-          <p>
-            في ظل الحياة المتسارعة وأنشغال الكثير في أعمالهم اليومية، نشأت عطور leadernace،
-            عندما يكون المصمم منغمس في بيئات العمل يصدر حل المشكلة برائحة العطر التي تصدر
-            عبير من الروائح الممزوجة في القوة والهدوء بخيارين لكِ ولهُ،
-            ولحل المشكلة كذلك أقرأ القصة ادناه
+          <p class="hero-text">
+            في ظل الحياة المتسارعة وأنشغال الكثير في أعمالهم اليومية، نشأت عطور
+            leadernace، عندما يكون المصمم منغمس في بيئات العمل يصدر حل المشكلة
+            برائحة العطر التي تصدر عبير من الروائح الممزوجة في القوة والهدوء
+            بخيارين لكِ ولهُ
           </p>
+
+          <button class="hero-btn" data-route="home1">اطلب الآن</button>
+        </div>
+      </section>
+
+      <section id="story" class="app-view story-section">
+        <div class="story-container">
+          <div class="story-upper">
+            <div class="heading-with-decoration">
+              <h2 class="story-heading">
+                عندما يكون
+                <span class="decorated-text">
+                  <span class="text-underline">المصمم</span>
+                </span>
+                منغمس في بيئات
+                <span class="colored-text">العمل</span>
+              </h2>
+              <div class="heading-decoration"></div>
+            </div>
+
+            <p class="story-description">
+              في ظل الحياة المتسارعة وأنشغال الكثير في أعمالهم اليومية، نشأت
+              عطور leadernace، عندما يكون المصمم منغمس في بيئات العمل يصدر حل
+              المشكلة برائحة العطر التي تصدر عبير من الروائح الممزوجة في القوة
+              والهدوء بخيارين لكِ ولهُ، ولحل المشكلة كذلك أقرأ القصة ادناه
+            </p>
+          </div>
+
+          <div class="story-lower">
+            <div class="story-content-column">
+              <div class="story-text-side">
+                <h3>قصتنا</h3>
+                <p>
+                  في ظل الحياة المتسارعة وأنشغال الكثير في أعمالهم اليومية، نشأت
+                  عطور leadernace، عندما يكون المصمم منغمس في بيئات العمل يصدر
+                  حل المشكلة برائحة العطر التي تصدر عبير من الروائح الممزوجة في
+                  القوة والهدوء بخيارين لكِ ولهُ، ولحل المشكلة كذلك أقرأ القصة
+                  ادناه
+                </p>
+              </div>
+            </div>
+            <div class="story-image-column">
+              <div class="story-image-single">
+                <img
+                  src="assets/images/bottle.jpeg"
+                  alt="Perfume Story Image"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="products" class="app-view">
+        <h1>المنتجات</h1>
+      </section>
+
+      <!-- Icon-based views (empty placeholders) -->
+      <section id="search" class="app-view"></section>
+      <section id="user" class="app-view"></section>
+      <section id="cart" class="app-view"></section>
+      <section id="menu" class="app-view"></section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-box">
+        <div class="footer-top">
+          <!-- Right: Logo -->
+          <div class="footer-logo">
+            <h2>LEADERNACE</h2>
+            <span>PERFUME</span>
+          </div>
+
+          <!-- Middle -->
+          <div class="footer-col">
+            <h4>الصفحات</h4>
+            <ul>
+              <li>الصفحة الرئيسية</li>
+              <li>منتجات</li>
+              <li>المنتجات</li>
+              <li>تواصل معنا</li>
+            </ul>
+          </div>
+
+          <!-- Left -->
+          <div class="footer-col">
+            <h4>من نحن</h4>
+            <ul>
+              <li>الشروط والأحكام</li>
+              <li>سياسة الاستبدال والإرجاع</li>
+              <li>سياسة الخصوصية</li>
+              <li>المدفوعات</li>
+            </ul>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="footer-bottom">
+          <div class="language">English 🌐</div>
+
+          <div class="social">
+            <span>Instagram</span>
+            <span>WhatsApp</span>
+            <span>TikTok</span>
+            <span>X</span>
+          </div>
+
+          <div class="payment">
+            <span>VISA</span>
+            <span>SAMSUNG Pay</span>
+          </div>
+        </div>
+
+        <div class="footer-email">
+          Email: <strong>cr@leadernace.store</strong>
         </div>
       </div>
-      <div class="story-image-column">
-        <div class="story-image-single">
-          <img src="assets/images/bottle.jpeg" alt="Perfume Story Image">
-        </div>
-      </div>
+    </footer>
 
-   
-    </div>
-
-  </div>
-</section>
-
-
-    <section id="products" class="app-view">
-      <h1>المنتجات</h1>
-    </section>
-
-    <section id="contact" class="app-view">
-      <h1>تواصل معنا</h1>
-    </section>
-
-    <!-- Icon-based views (empty placeholders) -->
-    <section id="search" class="app-view"></section>
-    <section id="user" class="app-view"></section>
-    <section id="cart" class="app-view"></section>
-    <section id="menu" class="app-view"></section>
-
-  </main>
-
-  <script src="assets/js/router.js"></script>
-</body>
+    <script src="assets/js/router.js"></script>
+  </body>
 </html>
