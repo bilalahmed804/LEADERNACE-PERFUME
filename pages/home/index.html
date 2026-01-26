@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LEADERNACE PERFUME</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header class="navbar">
       <div class="nav-icons">
         <button data-route="vector" aria-label="Vector">
-          <img src="../../../../assets/images/Vector.png" alt="Vector Icon" />
+          <img src="../../assets/images/Vector.png" alt="Vector Icon" />
         </button>
 
         <button data-route="profile" aria-label="Profile">
@@ -60,45 +60,67 @@
       </nav>
     </header>
 
-    <section class="contact-section">
-      <!-- HEADER -->
-      <div class="contact-header">
-        <h1>تواصل معنا</h1>
-        <p>نسعد بالإجابة على استفساراتكم ومشاركة شغفنا بالعطور معكم</p>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="hero-image">
+        <img src="../../assets/images/bluebottle.png" alt="Perfume" />
       </div>
+      <div class="hero-content">
+        <h1>عطر Nights:</h1>
+        <p>
+          خلق عطر Nights لكِ من أجود الزيوت العطرية حيث يكون الهدوء الليلي في
+          رائحة عطرك، بعد يومٍ طويل من العمل تستحقين الهدوء دون صخب الأعمال
+          وازدحام الشوارع، وهنا تكمن قصة العطر فيعشق الكثير العطور الهادئة ليلاً
+          التي تريح الاعصاب وتجلب لهم السعادة فالعطر سعادة قبل ان يكون رائحة.
+        </p>
+        <a href="#products" class="hero-btn">اطلب الان</a>
+      </div>
+    </section>
 
-      <!-- CONTAINER -->
-      <div class="contact-container">
-        <!-- FORM SIDE -->
-        <div class="contact-form">
-          <form>
-            <div class="field">
-              <label>الاسم</label>
-              <input type="text" placeholder="اكتب اسمك" />
-            </div>
+    <!-- PRODUCTS GRID -->
+    <section class="products">
+      <h2 class="section-title">المنتجات</h2>
 
-            <div class="field">
-              <label>البريد الإلكتروني</label>
-              <input type="email" placeholder="example@email.com" />
-            </div>
-
-            <div class="field">
-              <label>رقم الهاتف</label>
-              <input type="text" placeholder="+966xxxxxxxxx" />
-            </div>
-
-            <div class="field">
-              <label>الملاحظة</label>
-              <textarea placeholder="اكتب رسالتك هنا..."></textarea>
-            </div>
-
-            <button type="submit" class="send-btn">إرسال</button>
-          </form>
+      <div id="products" class="products-grid">
+        <div class="product-box">
+          <img src="../../assets/images/pro3.png" alt="" />
         </div>
+        <div class="product-box">
+          <img src="../../assets/images/oud.png" alt="" />
+        </div>
+        <div class="product-box">
+          <img src="../../assets/images/LimitedEdition.png" alt="" />
+        </div>
+        <div class="product-box">
+          <img src="../../assets/images/pro4.png" alt="" />
+        </div>
+        <div class="product-box">
+          <img src="../../assets/images/Samples.png" alt="" />
+        </div>
+        <div class="product-box-last">
+          <span class="text-box">الكل</span>
+        </div>
+      </div>
+    </section>
 
-        <!-- IMAGE SIDE -->
-        <div class="contact-image">
-          <!-- <span></span> -->
+    <!-- BEST SELLING -->
+    <section class="best-selling">
+      <h2 class="section-title">الأكثر مبيعاً</h2>
+
+      <div class="best-grid">
+        <div class="best-card">
+          <img src="../../assets/images/musk.png" alt="" />
+          <div class="card-info">
+            <h3>مسك</h3>
+            <span>2000 ﷼</span>
+          </div>
+        </div>
+        <div class="best-card">
+          <img src="../../assets/images/oud.png" alt="" />
+          <div class="card-info">
+            <h3>عود طبيعي</h3>
+            <span>2000 ﷼</span>
+          </div>
         </div>
       </div>
     </section>
@@ -108,8 +130,7 @@
         <div class="footer-top">
           <!-- Right: Logo -->
           <div class="footer-logo">
-            <h2>LEADERNACE</h2>
-            <span>PERFUME</span>
+            <img src="../../assets/images/logo.png" alt="logo">
           </div>
 
           <!-- Middle -->

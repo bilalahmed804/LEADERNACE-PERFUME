@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="checkout-section">
+      <!-- HEADER -->
+      <div class="checkout-header">
+        <h1>سلة المشتريات</h1>
+        <p>اخترت بعناية، بقيت خطوة واحدة</p>
+      </div>
+
+      <!-- CARD -->
+      <div class="checkout-card">
+        <!-- SHIPPING -->
+        <div class="card-title">عنوان الشحن</div>
+
+        <div class="form-grid">
+          <div class="field">
+            <label>الاسم</label>
+            <input type="text" placeholder="محمد" />
+          </div>
+
+          <div class="field">
+            <label>اسم العائلة</label>
+            <input type="text" placeholder="أحمد" />
+          </div>
+
+          <div class="field">
+            <label>البريد الإلكتروني</label>
+            <input type="email" placeholder="example@email.com" />
+          </div>
+
+          <div class="field">
+            <label>رقم الهاتف</label>
+            <input type="text" placeholder="+966" />
+          </div>
+
+          <div class="field">
+            <label>المدينة</label>
+            <input type="text" placeholder="الرياض" />
+          </div>
+
+          <div class="field">
+            <label>المنطقة</label>
+            <input type="text" placeholder="الرياض" />
+          </div>
+
+          <div class="field">
+            <label>العنوان</label>
+            <input type="text" placeholder="شارع الملك" />
+          </div>
+
+          <div class="field">
+            <label>الرمز البريدي</label>
+            <input type="text" placeholder="12345" />
+          </div>
+        </div>
+
+        <!-- PAYMENT -->
+        <div class="card-title payment-title">طريقة الدفع</div>
+
+        <div class="payment-methods">
+          <button><img src="icons/card.svg" alt="" /></button>
+          <button><img src="icons/apple-pay.svg" alt="" /></button>
+          <button><img src="icons/visa.svg" alt="" /></button>
+          <button><img src="icons/google-pay.svg" alt="" /></button>
+        </div>
+
+        <!-- SUMMARY -->
+        <div class="summary">
+          <div class="row">
+            <span>الضريبة</span>
+            <span>15 ﷼</span>
+          </div>
+          <div class="row">
+            <span>الشحن</span>
+            <span>مجانا</span>
+          </div>
+          <div class="row total">
+            <span>إجمالي السعر</span>
+            <span>15 ﷼</span>
+          </div>
+        </div>
+
+        <!-- PAY -->
+        <button class="pay-btn">
+          <img src="icons/google-pay.svg" alt="" />
+        </button>
+      </div>
+    </section>
+  </body>
+</html>

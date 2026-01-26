@@ -1,10 +1,6 @@
-* {
-  box-sizing: border-box;
-}
-
 @font-face {
   font-family: "Portada ARA";
-  src: url("../../assets/fonts/PortadaARARegular.ttf") format("truetype");
+  src: url("./assets/fonts/PortadaARARegular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -12,113 +8,33 @@
 
 @font-face {
   font-family: "Portada ARA";
-  src: url("../../assets/fonts/PortadaARABold.otf") format("opentype");
+  src: url("./assets/fonts/PortadaARABold.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
+/* GLOBAL BACKGROUND */
 body {
   margin: 0;
-  background: radial-gradient(circle at top, #1b1c22, #0d0e12);
-  font-family: "Segoe UI", Tahoma, sans-serif;
-  color: #fff;
+  min-height: 100vh;
+  background: url("./assets/images/bgimage.png") center / cover no-repeat fixed;
+  direction: rtl;
+  font-family: "Segoe UI", sans-serif;
+  position: relative;
 }
 
-/* HEADER */
-.contact-header {
-  text-align: center;
-}
-
-.contact-header h1 {
-  font-family: "Portada ARA", serif;
-  font-weight: bold;
-  font-size: 44px;
-}
-
-.contact-header p {
-  font-family: "Portada ARA", serif;
-  font-size: 18px;
-  opacity: 0.6;
-}
-
-/* CONTAINER */
-.contact-container {
-  max-width: 1200px;
-  margin: 50px auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  background-image: linear-gradient(180deg, #121820, #0a0e13);
-  border-radius: 18px;
-  overflow: hidden;
-}
-
-/* IMAGE SIDE */
-.contact-image {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image: url("../../assets/images/contactus.jpeg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 40px;
-}
-
-.contact-image img {
-  max-width: 90%;
-}
-
-/* FORM SIDE */
-.contact-form {
-  padding: 40px 50px;
-  background: #1a1d22;
-}
-
-.contact-form form {
-  display: flex;
-  flex-direction: column;
-  gap: 22px;
-}
-
-.field {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.field label {
-  font-size: 13px;
-  opacity: 0.7;
-}
-
-.field input,
-.field textarea {
-  background: #2a2d32;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 6px;
-  padding: 12px 14px;
-  color: #fff;
-  font-size: 13px;
-  outline: none;
-}
-
-.field textarea {
-  min-height: 120px;
-  resize: none;
-}
-
-/* BUTTON */
-.send-btn {
-  margin-top: 10px;
-  height: 42px;
-  background: linear-gradient(90deg, #ffffff, #cfcfcf);
-  color: #000;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 500;
+/* Dark luxury overlay on full page */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(5, 10, 20, 0.85),
+    rgba(5, 10, 20, 0.65)
+  );
+  z-index: -1;
 }
 
 .navbar {
@@ -193,6 +109,88 @@ body {
 
 .nav-link.is-active {
   opacity: 1;
+}
+
+/* LOGO */
+.nav-logo {
+  text-align: center;
+  font-weight: 600;
+}
+
+.nav-logo small {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 4px;
+}
+
+/* ICONS */
+.nav-icons {
+  display: flex;
+  gap: 16px;
+}
+
+.nav-icons button {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+/* HERO SECTION */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Content */
+.hero-content {
+  max-width: 900px;
+  padding: 0 20px;
+  color: #ffffff;
+}
+
+/* Heading */
+.hero-title {
+  font-family: "Portada ARA", serif;
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+/* Subtitle */
+.hero-subtitle {
+  font-family: "Portada ARA", serif;
+  font-size: 28px;
+  margin-bottom: 2px;
+}
+
+/* Description */
+.hero-description {
+  font-family: "Portada ARA", serif;
+  font-size: 15px;
+  line-height: 1.9;
+  color: #d0d0d0;
+  margin-bottom: 35px;
+}
+
+/* Button */
+.hero-btn {
+  font-family: "Portada ARA", serif;
+  display: inline-block;
+  padding: 8px 36px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: #ffffff;
+  color: #000000;
 }
 
 .footer {
@@ -285,20 +283,4 @@ hr {
   text-align: center;
   font-size: 14px;
   opacity: 0.85;
-}
-
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .contact-box {
-    flex-direction: column;
-  }
-
-  .contact-image,
-  .contact-form {
-    width: 100%;
-  }
-
-  .contact-image {
-    height: 250px;
-  }
 }
