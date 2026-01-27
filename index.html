@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <title>LEADERNACE PERFUME</title>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -10,20 +14,26 @@
   <body class="rtl-app theme-dark">
     <main class="app-container">
       <header class="navbar">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+
+        <label for="nav-toggle" class="nav-toggle-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
         <div class="nav-icons">
-          <button data-route="vector" aria-label="Vector">
+          <a href="#" aria-label="Vector">
             <img src="assets/images/Vector.png" alt="Vector Icon" />
-          </button>
-
-          <button data-route="profile" aria-label="Profile">
+          </a>
+          <a href="./pages/login/index.html" aria-label="Profile">
             <img src="assets/images/profile.png" alt="Profile Icon" />
-          </button>
-
-          <button data-route="group" aria-label="Group">
+          </a>
+          <a href="./pages/cart/index.html" aria-label="Group">
             <img src="assets/images/Group.png" alt="Group Icon" />
-          </button>
-
-          <button aria-label="More" class="icon-btn">
+          </a>
+          <a href="#" aria-label="Group">
+            <img src="assets/images/riyal.png" alt="Group Icon" />
             <svg
               class="icon-arrow"
               width="12"
@@ -40,32 +50,25 @@
                 stroke-linejoin="round"
               />
             </svg>
-          </button>
+          </a>
         </div>
-
         <!-- CENTER: LOGO IMAGE -->
         <div class="nav-logo">
           <img src="assets/images/logo.png" alt="Leadernace Perfume Logo" />
         </div>
-
         <!-- LEFT: NAV LINKS -->
         <nav class="nav-links">
-          <button data-route="home" class="nav-link is-active">
-            الصفحة الرئيسية
-          </button>
-
-          <button data-route="story" class="nav-link">قصتنا</button>
-          <button data-route="products" class="nav-link">المنتجات</button>
-          <a href="/pages/contact/index.html"
-            ><button class="nav-link">تواصل معنا</button></a
-          >
+          <a href="/index.html" class="nav-link is-active"> الصفحة الرئيسية </a>
+          <a href="/pages/story/index.html" class="nav-link">قصتنا</a>
+          <a href="/pages/products/index.html" class="nav-link">المنتجات</a>
+          <a href="/pages/contact/index.html" class="nav-link">تواصل معنا</a>
         </nav>
       </header>
 
       <!-- HERO SECTION START -->
       <section class="hero">
         <div class="hero-content">
-          <h1 class="hero-title">عـــطورٌ ولــــــــدت للقـــــادة </h1>
+          <h1 class="hero-title">عـــطورٌ ولــــــــدت للقـــــادة</h1>
 
           <p class="hero-subtitle">فقــط</p>
 
@@ -90,56 +93,72 @@
 
     <footer class="footer">
       <div class="footer-box">
+        <!-- TOP -->
         <div class="footer-top">
-          <!-- Right: Logo -->
+          <!-- RIGHT: LOGO -->
           <div class="footer-logo">
-            <h2>LEADERNACE</h2>
-            <span>PERFUME</span>
+            <a href="/">
+              <img src="./assets/images/logo.png" alt="" />
+            </a>
           </div>
 
-          <!-- Middle -->
+          <!-- MIDDLE -->
           <div class="footer-col">
             <h4>الصفحات</h4>
             <ul>
-              <li>الصفحة الرئيسية</li>
-              <li>منتجات</li>
-              <li>المنتجات</li>
-              <li>تواصل معنا</li>
+              <li><a href="/">الصفحة الرئيسية</a></li>
+              <li><a href="./pages/story/index.html">قصتنا</a></li>
+              <li><a href="./pages/products/index.html">المنتجات</a></li>
+              <li><a href="/pages/contact/index.html">تواصل معنا</a></li>
             </ul>
           </div>
 
-          <!-- Left -->
+          <!-- LEFT -->
           <div class="footer-col">
             <h4>من نحن</h4>
             <ul>
-              <li>الشروط والأحكام</li>
-              <li>سياسة الاستبدال والإرجاع</li>
-              <li>سياسة الخصوصية</li>
-              <li>المدفوعات</li>
+              <li>
+                <a href="./pages/conditions/index.html">الشروط والأحكام</a>
+              </li>
+              <li>
+                <a href="./pages/returnpolicy/index.html"
+                  >سياسة الاستبدال والإرجاع</a
+                >
+              </li>
+              <li>
+                <a href="./pages/privacypolicy/index.html">سياسة الخصوصية</a>
+              </li>
+              <li><a href="#">الشهادات</a></li>
             </ul>
           </div>
         </div>
 
         <hr />
 
+        <!-- BOTTOM -->
         <div class="footer-bottom">
-          <div class="language">English 🌐</div>
-
           <div class="social">
-            <span>Instagram</span>
-            <span>WhatsApp</span>
-            <span>TikTok</span>
-            <span>X</span>
+            <i class="fa-brands fa-x-twitter"></i>
+            <i class="fa-brands fa-tiktok"></i>
+            <i class="fa-brands fa-whatsapp"></i>
+            <i class="fa-brands fa-instagram"></i>
           </div>
 
           <div class="payment">
-            <span>VISA</span>
-            <span>SAMSUNG Pay</span>
+            <img src="./assets/images/samsungpay.png" alt="icons" />
+            <img src="./assets/images/visa.png" alt="icons" />
+            <img src="./assets/images/applepay.png" alt="icons" />
+            <img src="./assets/images/wallet.png" alt="icons" />
           </div>
+        </div>
+        <div class="language">
+          <i class="fa-solid fa-globe"></i>
+          English
         </div>
 
         <div class="footer-email">
-          Email: <strong>cr@leadernace.store</strong>
+          Email: <strong>Cr@leadernace.store</strong>
+          <i class="fa-regular fa-envelope"></i>
         </div>
       </div>
     </footer>

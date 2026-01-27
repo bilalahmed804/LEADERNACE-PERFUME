@@ -5,8 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>سياسة الإستبدال والإسترجاع</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
   </head>
   <body>
+    <header class="navbar">
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+
+      <label for="nav-toggle" class="nav-toggle-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <div class="nav-icons">
+        <a href="#" aria-label="Vector">
+          <img src="../../assets/images/Vector.png" alt="Vector Icon" />
+        </a>
+        <a href="../login/index.html" aria-label="Profile">
+          <img src="../../assets/images/profile.png" alt="Profile Icon" />
+        </a>
+        <a href="../cart/index.html" aria-label="Group">
+          <img src="../../assets/images/Group.png" alt="Group Icon" />
+        </a>
+        <a href="#" aria-label="Group">
+          <img src="../../assets/images/riyal.png" alt="Group Icon" />
+          <svg
+            class="icon-arrow"
+            width="12"
+            height="12"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6 9L12 15L18 9"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+      </div>
+      <!-- CENTER: LOGO IMAGE -->
+      <div class="nav-logo">
+        <img src="../../assets/images/logo.png" alt="Leadernace Perfume Logo" />
+      </div>
+      <!-- LEFT: NAV LINKS -->
+      <nav class="nav-links">
+        <a href="/index.html" class="nav-link"> الصفحة الرئيسية </a>
+        <a href="../story/index.html" class="nav-link">قصتنا</a>
+        <a href="../products/index.html" class="nav-link">المنتجات</a>
+        <a href="../contact/index.html" class="nav-link"
+          >تواصل معنا</a
+        >
+      </nav>
+    </header>
+
     <section class="policy-section">
       <h1 class="page-title">سياسة الإستبدال والإسترجاع</h1>
 
@@ -59,5 +117,77 @@
         </p>
       </div>
     </section>
+
+    <footer class="footer">
+      <div class="footer-box">
+        <!-- TOP -->
+        <div class="footer-top">
+          <!-- RIGHT: LOGO -->
+          <div class="footer-logo">
+            <a href="/">
+              <img src="../../assets/images/logo.png" alt="" />
+            </a>
+          </div>
+
+          <!-- MIDDLE -->
+          <div class="footer-col">
+            <h4>الصفحات</h4>
+            <ul>
+              <li><a href="/index.html">الصفحة الرئيسية</a></li>
+              <li><a href="../story/index.html">قصتنا</a></li>
+              <li><a href="../products/index.html">المنتجات</a></li>
+              <li><a href="../contact/index.html">تواصل معنا</a></li>
+            </ul>
+          </div>
+
+          <!-- LEFT -->
+          <div class="footer-col">
+            <h4>من نحن</h4>
+            <ul>
+              <li>
+                <a href="../conditions/index.html">الشروط والأحكام</a>
+              </li>
+              <li>
+                <a href="../returnpolicy/index.html"
+                  >سياسة الاستبدال والإرجاع</a
+                >
+              </li>
+              <li>
+                <a href="../privacypolicy/index.html">سياسة الخصوصية</a>
+              </li>
+              <li><a href="#">الشهادات</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <hr />
+
+        <!-- BOTTOM -->
+        <div class="footer-bottom">
+          <div class="social">
+            <i class="fa-brands fa-x-twitter"></i>
+            <i class="fa-brands fa-tiktok"></i>
+            <i class="fa-brands fa-whatsapp"></i>
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+
+          <div class="payment">
+            <img src="../../assets/images/samsungpay.png" alt="icons" />
+            <img src="../../assets/images/visa.png" alt="icons" />
+            <img src="../../assets/images/applepay.png" alt="icons" />
+            <img src="../../assets/images/wallet.png" alt="icons" />
+          </div>
+        </div>
+        <div class="language">
+          <i class="fa-solid fa-globe"></i>
+          English
+        </div>
+
+        <div class="footer-email">
+          Email: <strong>Cr@leadernace.store</strong>
+          <i class="fa-regular fa-envelope"></i>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
