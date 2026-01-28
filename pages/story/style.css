@@ -651,4 +651,108 @@ body {
     margin-top: 16px;
     font-size: 13px;
   }
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  * {
+    max-width: 100%;
+  }
+
+  /* CONTAINER PADDING FIX */
+  .story-container {
+    padding: 0 16px;
+  }
+
+  /* ================= HEADER ================= */
+  .story-header {
+    margin-bottom: 24px;
+  }
+
+  .story-header h2 {
+    font-size: 22px;
+    line-height: 1.4;
+  }
+
+  .story-header p {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  /* ================= FIRST STORY BLOCK ================= */
+  .story-body {
+    display: block;
+  }
+
+  /* IMAGE HIDE (FIRST ONE) */
+  .story-body .story-image {
+    display: none;
+  }
+
+  .story-text {
+    max-width: 100%;
+  }
+
+  .story-text h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .story-text p {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  /* ================= SECOND STORY BLOCK ================= */
+  .story-body1 {
+    display: block;
+    margin-top: 30px;
+  }
+
+  /* IMAGE SMALL & CENTER */
+  .story-image1 img {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto 18px;
+    display: block;
+    height: auto;
+  }
+
+  .story-text1 {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .story-text1 h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .story-text1 p {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  /* ================= REMOVE DOUBLE IMAGES ================= */
+  .story-images {
+    display: none;
+  }
+
+  /* ================= REMOVE VALUES SECTION ================= */
+  .values {
+    display: none;
+  }
+
+  /* ================= QUALITY SECTION ================= */
+  .quality-section {
+    height: 45vh;
+    margin-top: 40px;
+  }
+
+  .quality-overlay h2 {
+    font-size: 22px;
+    line-height: 1.4;
+    padding: 0 20px;
+  }
 }

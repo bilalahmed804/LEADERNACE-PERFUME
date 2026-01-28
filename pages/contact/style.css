@@ -1,6 +1,4 @@
-* {
-  box-sizing: border-box;
-}
+
 
 @font-face {
   font-family: "Portada ARA";
@@ -16,6 +14,27 @@
   font-weight: 700;
   font-style: normal;
   font-display: swap;
+}
+
+/* === GLOBAL RESET & SAFETY === */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+  height: auto;
 }
 
 body {
@@ -501,5 +520,35 @@ body {
     opacity: 0.85;
     margin-top: 16px;
     font-size: 13px;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+    margin: 30px auto;
+    width: 100%;
+  }
+
+  .contact-form {
+    padding: 24px 18px;
+  }
+
+  .contact-image {
+    min-height: 220px;
+    padding: 20px;
+  }
+
+  .contact-header h1 {
+    font-size: 28px;
+  }
+
+  .contact-header p {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+
+  input,
+  textarea,
+  button {
+    width: 100%;
   }
 }

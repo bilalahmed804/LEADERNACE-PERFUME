@@ -14,6 +14,13 @@
   font-display: swap;
 }
 
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -471,5 +478,36 @@ body {
     opacity: 0.85;
     margin-top: 16px;
     font-size: 13px;
+  }
+  .privacy-wrapper {
+    max-width: 100%;
+    padding: 120px 16px 70px; /* navbar spacing + mobile padding */
+  }
+
+  .privacy-title {
+    font-size: 26px;
+    margin-bottom: 14px;
+  }
+
+  .privacy-content {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .privacy-content h3 {
+    font-size: 15px;
+    margin-bottom: 8px;
+  }
+
+  .privacy-content section {
+    margin-bottom: 24px;
+  }
+  .privacy-content ul {
+    padding-right: 10px;
+  }
+
+  .privacy-content ul li {
+    font-size: 13px;
+    padding-right: 12px;
   }
 }

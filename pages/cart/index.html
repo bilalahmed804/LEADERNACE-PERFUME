@@ -23,16 +23,16 @@
 
         <div class="nav-icons">
           <a href="#" aria-label="Vector">
-            <img src="assets/images/Vector.png" alt="Vector Icon" />
+            <img src="../../assets/images/Vector.png" alt="Vector Icon" />
           </a>
           <a href="../login/index.html" aria-label="Profile">
-            <img src="assets/images/profile.png" alt="Profile Icon" />
+            <img src="../../assets/images/profile.png" alt="Profile Icon" />
           </a>
           <a href="../cart/index.html" aria-label="Group">
-            <img src="assets/images/Group.png" alt="Group Icon" />
+            <img src="../../assets/images/Group.png" alt="Group Icon" />
           </a>
           <a href="#" aria-label="Group">
-            <img src="assets/images/riyal.png" alt="Group Icon" />
+            <img src="../../assets/images/riyal.png" alt="Group Icon" />
             <svg
               class="icon-arrow"
               width="12"
@@ -53,16 +53,17 @@
         </div>
         <!-- CENTER: LOGO IMAGE -->
         <div class="nav-logo">
-          <img src="assets/images/logo.png" alt="Leadernace Perfume Logo" />
+          <img
+            src="../../assets/images/logo.png"
+            alt="Leadernace Perfume Logo"
+          />
         </div>
         <!-- LEFT: NAV LINKS -->
         <nav class="nav-links">
-          <a href="./pages/home/index.html" class="nav-link is-active">
-            الصفحة الرئيسية
-          </a>
-          <a href="./pages/story/index.html" class="nav-link">قصتنا</a>
-          <a href="./pages/products/index.html" class="nav-link">المنتجات</a>
-          <a href="/pages/contact/index.html" class="nav-link">تواصل معنا</a>
+          <a href="/index.html" class="nav-link"> الصفحة الرئيسية </a>
+          <a href="../story/index.html" class="nav-link">قصتنا</a>
+          <a href="../products/index.html" class="nav-link">المنتجات</a>
+          <a href="../contact/index.html" class="nav-link">تواصل معنا</a>
         </nav>
       </header>
       <section class="cart-section">
@@ -78,48 +79,53 @@
 
           <!-- ITEM -->
           <div class="cart-item">
-            <button class="remove">×</button>
+            <div class="item-image">
+              <img src="../../assets/images/smallcarticon.png" alt="" />
+              <img class="fav" src="../../assets/images/smallhearticon.png" alt="" />
+            </div>
+            <button class="remove">
+              <img src="../../assets/images/crossicon.png" alt="" />
+            </button>
 
             <div class="item-info">
               <h3>Nights عطر</h3>
-              <span>ml 100</span>
+              <span>عطور   ml 100 </span>
             </div>
 
             <div class="item-qty">
-              <button>-</button>
+              <button>الكمية</button>
               <span>1</span>
               <button>+</button>
             </div>
 
-            <div class="item-price">السعر 460 ﷼</div>
+            <div class="item-price">السعر : 460 ﷼ شامل الضريبة والتوصيل</div>
 
-            <div class="item-image">
-              <img src="images/product.png" alt="" />
-              <img class="fav" src="icons/heart.svg" alt="" />
-            </div>
           </div>
 
           <!-- ITEM -->
           <div class="cart-item">
-            <button class="remove">×</button>
+            <div class="item-image">
+              <img src="../../assets/images/smallcarticon.png" alt="" />
+              <img class="fav" src="../../assets/images/smallhearticon.png" alt="" />
+            </div>
+            <button class="remove">
+              <img src="../../assets/images/crossicon.png" alt="" />
+            </button>
 
             <div class="item-info">
               <h3>Nights عطر</h3>
-              <span>ml 100</span>
+              <span>عطور   ml 100 </span>
             </div>
 
             <div class="item-qty">
-              <button>-</button>
+              <button>الكمية</button>
               <span>1</span>
               <button>+</button>
             </div>
 
-            <div class="item-price">السعر 460 ﷼</div>
+            <div class="item-price">السعر : 460 ﷼ شامل الضريبة والتوصيل</div>
 
-            <div class="item-image">
-              <img src="images/product.png" alt="" />
-              <img class="fav" src="icons/heart.svg" alt="" />
-            </div>
+            
           </div>
 
           <hr />
@@ -133,12 +139,12 @@
           <!-- SUMMARY -->
           <div class="summary">
             <div class="row">
-              <span>الضريبة</span>
+              <span>الخصم:</span>
               <span>15 ﷼</span>
             </div>
             <div class="row">
               <span>الشحن</span>
-              <span>مجانا</span>
+              <span>مجاناً</span>
             </div>
             <div class="row total">
               <span>إجمالي السعر</span>
@@ -147,7 +153,7 @@
           </div>
 
           <!-- ACTION -->
-          <button class="checkout">الدفع الآن</button>
+          <button class="checkout">الشحن والدفع > </button>
         </div>
       </section>
     </main>

@@ -14,8 +14,6 @@
   font-display: swap;
 }
 
-
-
 body {
   margin: 0;
   min-height: 100vh;
@@ -222,7 +220,6 @@ body {
   display: block;
 }
 
-
 .footer {
   padding: 60px 20px;
   direction: rtl;
@@ -300,7 +297,6 @@ body {
   background: rgba(255, 255, 255, 0.2);
   margin: 30px 0;
 }
-
 
 .footer-bottom {
   display: grid;
@@ -496,5 +492,33 @@ body {
     opacity: 0.85;
     margin-top: 16px;
     font-size: 13px;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 120px; /* navbar overlap se bachao */
+    padding-bottom: 80px;
+  }
+
+  .hero-title {
+    font-size: 28px;
+    line-height: 1.4;
+  }
+
+  .hero-subtitle {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 28px;
+    padding: 0 6px;
+  }
+
+  .hero-btn {
+    font-size: 14px;
+    padding: 10px 42px;
   }
 }
